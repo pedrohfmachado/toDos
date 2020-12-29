@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ToDo! 2.0</title>
+  <link rel="stylesheet" href="styles/app.css" />
+  <script src="scripts/app.js" defer></script>
+</head>
+<body>
+  <template id="single-task">
+    <li class="task">
+      <h1></h1>
+      <div class="task-description">
+        <h2></h2>
+      </div>
+      <div class='task-date-time'>
+        <h3></h3>
+      </div>
+      <div class="align-btn">
+        <button class="btn">DEL</button>
+      </div>
+    </li>
+  </template>
+  <div id="backdrop">
+  </div>
+  <div class="card show" id="detail-card">
+  </div>
+  <div class="card show" id="delete-card">
+    <h1>Are u sure?</h1>
+    <div class="align-btn-backdrop">
+      <button id="card-btn-yes" class="btn">yep</button>
+      <button id="card-btn-no" class="btn">no</button>
+    </div>
+  </div>
+  <section id="left-side">
+  <section id="user-input" >
+    <h3>to.</h3>
+    <h1>DO's</h1>
+    <div class="input">
+      <label for="title">Title</label>
+      <input type="text" id="title" />
+    </div>
+    <div class="input">
+      <label for="description" class="input-description">Description</label>
+      <textarea name="input-description" rows="3" cols="25" id="description"></textarea>
+    </div>
+    <div class="date">
+      <label for="date">Date</label>
+      <input type="date" id="date">
+    </div>
+    <div class="time">
+      <label for="time">Time</label>
+      <input type="time" id="time">
+    </div>
+    <div class="align-btn">
+      <button id="add-btn" class="btn">OK</button>
+    </div>
+  </section>
+  <section id="filter-el">
+    <div>
+      <label for="filtrar" >Filter</label>
+      <input type="text" id="filter">
+    </div>
+    <div class="align-btn">
+      <button id="fltr-btn" class="btn">OK</button>
+    </div>
+  </section>
+  <section id=sort-el>
+    <div>
+      <label for="Ordenar">Sort</label>
+      <select name="sort" id="sort">
+        <option value=""></option>
+        <option value="title">Title</option>
+        <option value="date">Date</option>
+      </select>
+    </div>
+    <div class="align-btn">
+      <button id="srt-btn" class="btn">OK</button>
+    </div>
+  </section>
+</section>
+<section id="right-side">
+  <section id="tasks-section" class="tasks">
+   <!--  <h1 class="tasks-section-h1">to Do's</h1> -->
+    <ul id="tasks-results"></ul>
+    <div class="to-top-btn">
+      <button id="to-top-btn" class="btn">TOPO</button>
+    </div>
+  </section>
+</section>
+</body>
+</html>
